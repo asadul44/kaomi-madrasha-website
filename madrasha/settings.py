@@ -120,3 +120,5 @@ JAZZMIN_SETTINGS = {
 
     "site_header": "PROJECT",
 }
+
+ALLOWED_HOSTS = ['.vercel.app']
