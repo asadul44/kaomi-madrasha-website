@@ -1,0 +1,14 @@
+{
+    "builds": [
+        {
+            "src": "kaomi-madrasha-website/wsgi.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "kaomi-madrasha-website/wsgi.py"
+        }
+    ]
+}
