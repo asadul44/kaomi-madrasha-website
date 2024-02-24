@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'madrasha'
     
 ]
 
@@ -57,13 +58,18 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'madrasha.wsgi.application'
+WSGI_APPLICATION = 'madrasha.wsgi.app'
 
   # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
 DATABASES = {
+    
+#   'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
       'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
