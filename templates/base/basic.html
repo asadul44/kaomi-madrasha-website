@@ -66,8 +66,8 @@
     <link rel='stylesheet' href= "{% static "css/elementor-assets-lib-font-awesome-css-fontawesome.min.css" %}">
     <link rel='stylesheet' href= "{% static "css/elementor-assets-lib-font-awesome-css-regular.min.css" %}">
     <link rel='stylesheet' href= "{% static "css/elementor-assets-lib-font-awesome-css-solid.min.css" %}">
-    <script>
-      /* <![CDATA[ */
+    {% comment %} <script>
+     
       var rcewpp = {
       	"ajax_url":"http://localhost/index/wp-admin/admin-ajax.php",
       	"nonce": "7088d40d7e",
@@ -75,8 +75,8 @@
       	"settings_icon": 'http://localhost/index/wp-content/plugins/export-wp-page-to-static-html-pro-premium/admin/images/settings.png',
       	"settings_hover_icon": 'http://localhost/index/wp-content/plugins/export-wp-page-to-static-html-pro-premium/admin/images/settings_hover.png'
       };
-      /* ]]\> */
-    </script>
+     
+    </script> {% endcomment %}
     <script src="{% static "js/jquery.min.js" %}" id='jquery-core-js'></script>
     <script src="{% static "js/jquery-migrate.min.js" %}" id='jquery-migrate-js'></script>
     <script src="{% static "js/export-wp-page-to-static-html-public.js" %}" id='export-wp-page-to-static-html-js'></script>
