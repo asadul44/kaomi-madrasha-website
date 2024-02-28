@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Slider,BasicInfo,ImportantLink1,ImportantLink2,AddClass,ExamResult,Syllabus,ClassRoutine,Notice,Gallary,Subject,Teacher,Lagacy,Employee
+from .models import Slider,BasicInfo,ImportantLink1,ImportantLink2,AddClass,ExamResult,Syllabus,ClassRoutine,Notice,Gallary,Subject,Teacher,Lagacy,Employee,MadrashaSlider
 
 admin.site.register(BasicInfo)
 admin.site.register(ImportantLink1)
@@ -15,4 +15,4 @@ admin.site.register(Teacher)
 admin.site.register(Lagacy)
 admin.site.register(Employee)
 admin.site.register(Slider)
-
+admin.site.register(MadrashaSlider)

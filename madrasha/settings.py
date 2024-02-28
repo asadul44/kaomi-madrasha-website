@@ -129,7 +129,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 JAZZMIN_SETTINGS = {
 
-    "site_title": "EMHASH",
+    "site_title": "ASADUL",
 
     "site_header": "PROJECT",
 }

@@ -28,7 +28,8 @@ def home(request):
 
 
     sliders = Slider.objects.all()
-    # for i in sliders:
+    madrashaSlider = MadrashaSlider.objects.all().reverse()
+    # for i in madrashaSlider:
     #     print(i.photo_title)
 
     g = Gallary.objects.all()
@@ -40,6 +41,7 @@ def home(request):
         'headmaster' : professor1,
         'sliders' : sliders,
         'pic' : g,
+        'madrasahSlider': madrashaSlider
 
     }
 

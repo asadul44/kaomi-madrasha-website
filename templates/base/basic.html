@@ -1,5 +1,236 @@
 {% load static %}
+
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href= "{% static "css/marquee-cont.css" %}">
+    <link rel="stylesheet" href= "{% static "css/slider.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Add your custom styles here */
+        .arabic {
+            font-family: 'Amiri', serif;
+            direction: rtl;
+        }
+        .bangla {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        /* This is a simple representation of the carousel. 
+           You will need to implement functionality with JS or a library. */
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+        .carousel img {
+            min-width: 100%;
+            scroll-snap-align: start;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-green-800 text-white text-center p-4">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header content here -->
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="{% static 'images/logo_2.png' %}" alt="Institution Logo" class="h-16">
+                    <div>
+                        <h1 class="text-2xl font-bold bangla">Al- Jamiatul Ahliah Darul Uloom Moinul Islam</h1>
+                        <p class="bangla">Hathazari, Chittagong-4330, Bangladesh</p>
+                        <p class="text-xl arabic">الجامعة الإسلامية دار العلوم منول الإسلام</p>
+                    </div>
+                </div>
+                <!-- Placeholder for right-aligned items or navigation -->
+                <div class="hidden md:flex items-center space-x-1">
+                  <a href="#" class="bangla text-sm px-3 py-2 rounded-md text-white bg-orange-500 hover:bg-orange-600">হোম</a>
+                  <a href="#" class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700">জামিয়া পরিচিতি</a>
+                  <a href="#" class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700">কি করব</a>
+                  <a href="#" class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700">অনলাইন অ্যাডমিশন</a>
+                  <a href="#" class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700">যোগাযোগ</a>
+                  <a href="#" class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700">কি করব</a>
+                
+                  <a href="#" class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700">যোগাযোগ</a>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto p-4 flex">
+        <div class="w-2/4 p-4">
+            <!-- Left side content: History or description -->
+            <h2 class="text-3xl bangla font-bold mb-4">দারুল উলূম  সংক্ষিপ্ত পরিচিতি</h2>
+            <p class="bangla mb-4 font-weight: 100 leading-300">
+              আল-জামিয়াতুল উপ-মহাদেশের অন্যতম বৃহৎ ও সুবিখ্যাত একটি ইসলামী শিক্ষা প্রতিষ্ঠান। প্রতিষ্ঠানটি বাংলাদেশের চট্টগ্রাম জেলার হাটহাজারী উপজেলার প্রাণকেন্দ্রে অবস্থিত। জামিয়ার আয়তন ৪.৪৩ একর বা ১৭,৯২৭ বর্গ মিটার। জামিয়ায় বর্তমানে ১১০ জন দেশবরেণ্য সুদক্ষ শিক্ষক এবং কর্মকর্তার তত্ত্বাবধানে প্রায় ৮ সহস্রাধিক ছাত্র অধ্যায়নের সুযোগ লাভ করে আসছে। শুধুমাত্র দাওরায়ে হাদীস (টাইটেল) ক্লাসে ২৫৩৮ জন ছাত্র অধ্যায়ন করছে। তাছাড়া প্রায় ৪,৭০০ জন গরীব মেধাবী ছাত্রকে বিনামূল্যে ও অর্ধমূল্যে লিল্লাহ্ বোর্ডিং থেকে ফ্রি খোরাকী দেওয়া হচ্ছে।
+
+দরুল উলূম হাটহাজারী’র শিক্ষাব্যবস্থা সম্পূর্ণ অবৈতনিক এবং ক্যাম্পাসে ছাত্র-শিক্ষকদের জন্য প্রচলিত রাজনৈতিক চর্চা সম্পূর্ণ নিষিদ্ধ। ক্যাম্পাসে সবসময় শান্তিপূর্ণ অবস্থা বিরাজ করে। ছাত্রদের জন্য লেখাপড়ার পরিবেশ ও শান্তিপূর্ণ ক্যাম্পাস নিশ্চিত করার জন্য জামিয়া কর্তৃপক্ষ সার্বক্ষণিক কঠোর নজরদারির ব্যবস্থা করে থাকেন।
+ দারুল উলূম হাটহাজারীর একদল উলামায়ে কেরাম ইসলাম ও মুসলমানদের স্বার্থ-সংশ্লিষ্ট বিষয়াদি নিয়ে নিরলস কাজ করে যাচ্ছেন।
+            </p>
+            <button class="bg-green-600 text-white bangla px-4 py-2 rounded hover:bg-green-700 transition-colors">বিস্তারিত</button>
+        </div>
+        <div class="w-2/4 p-4 carousel">
+            <!-- Right side carousel: Static representation -->
+            <div class="slider slider1">
+              <div class="slide active">
+                 <img src="{% static "images/madrasha_11.png" %}"  width="10" height="10" alt="first">
+              </div>
+
+              {% for slider in sliders %}
+              
+               <div class="slide"> 
+                  <img src="{{slider.add_photo.url}}" width="10" height="10" alt="">
+               </div>
+
+              {% endfor %}
+      
+               <div class="navigation">
+                  <div class="btn active"></div>
+                  {% for _ in sliders %}
+                  <div class="btn"></div>
+                  {% endfor %}
+                  
+               </div>
+            </div>
+
+            <!-- Repeat the above line for each image in your carousel -->
+        </div>
+    </div>
+
+    <div class="bg-green-200 p-8">
+      <div class="flex space-x-4">
+  
+          <!-- Left side card for the President's speech -->
+          <div class="bg-green-300 p-4 rounded-lg shadow-md w-1/4">
+              <h2 class="text-lg text-blue-900 bangla font-bold mb-2">অধ্যক্ষের বাণী</h2>
+              <img src="{% static 'images/profile1.jpg' %}" alt="President's Photo" class="mb-3">
+              <p class="bangla">
+                  মাওলানা, মোঃ শফিকুল ইসলাম <br>
+                  পদবীঃ অধ্যক্ষ <br>
+                  ইমেইলঃ shafiqulislam@gmail.com <br>
+                  মোবাইলঃ 1737257198 <br>
+                  আরও দেখুন......
+              </p>
+          </div>
+  
+          <!-- Center carousel for images -->
+          <div class="flex flex-col items-center justify-center w-2/4">
+              <!-- Static images for carousel -->
+              <div class="slider slider2" >
+                <div class="slide active">
+                   <img src="{% static "images/madrasha_11.png" %}"  width="10" height="10" alt="first">
+                </div>
+  
+                {% for madarashaslider in madrasahSlider %}
+                
+                 <div class="slide"> 
+                    <img src="{{madarashaslider.add_photo.url}}" width="10" height="10" alt="">
+                      {{ madarashaslider }}
+                 </div>
+  
+                {% endfor %}
+        
+                 <div class="navigation">
+                    <div class="btn active"></div>
+                    {% for _ in madrasahSlider %}
+                    <div class="btn"></div>
+                    {% endfor %}
+                    
+                 </div>
+              </div>
+          
+          </div>
+  
+          <!-- Right side card for the Principal's speech -->
+          <div class="bg-green-300 p-4 rounded-lg shadow-md w-1/4">
+              <h2 class="text-lg text-blue-900 bangla font-bold mb-2">এডমিনের বাণী</h2>
+              <img src="{% static 'images/images.jpeg' %}" alt="Principal's Photo" class="mb-3">
+              <p class="bangla">
+                  মাওলানা, মোঃ রবিউল ইসলাম <br>
+                  পদবীঃ Admin <br>
+                  ইমেইলঃ rabiulislam@gmail.com <br>
+                  মোবাইলঃ 1784034234 <br>
+                  আরও দেখুন......
+              </p>
+          </div>
+  
+      </div>
+  </div>
+  
+  <div class="flex justify-between">
+    <!-- Left side content -->
+    <div class="bg-green-700 text-white p-4 w-1/3">
+        <div class="bg-blue-800 p-3 mb-4">
+            <h2 class="text-xl bangla font-bold">মাদ্রাসা সম্পর্কিত তথ্য</h2>
+        </div>
+        <ul class="space-y-2">
+            <li class="bg-blue-500 p-2 bangla">প্রতিষ্ঠানের কর্মকান্ড</li>
+            <!-- More items here -->
+            <li class="bg-blue-500 p-2 bangla">পরিচালনা পর্ষদ</li>
+        </ul>
+    </div>
+
+    <!-- Center notice board -->
+    <div class="bg-green-500 p-4 w-1/3">
+        <div class="bg-yellow-400 p-3 mb-4">
+            <h2 class="text-xl bangla font-bold">নোটিশ বোর্ড</h2>
+        </div>
+        <div class="bg-white text-black p-3 mb-4">
+            <p class="bangla">
+                <!-- Notice content here -->
+                জরুরী জানানো যাচ্ছে যে, আগামী কাল থেকে...
+            </p>
+        </div>
+        <div class="text-right">
+            <button class="bg-black text-white px-4 py-2 bangla">See all notice</button>
+        </div>
+    </div>
+
+    <!-- Right side special application -->
+    <div class="bg-green-700 text-white p-4 w-1/3">
+        <div class="bg-blue-800 p-3 mb-4">
+            <h2 class="text-xl bangla font-bold">বিশেষ আবেদন</h2>
+        </div>
+        <div class="space-y-4">
+            <div class="bg-gray-200 text-black p-3">
+                <p class="bangla">
+                    <!-- Application content here -->
+                    আগামী জানানো যাচ্ছে যে, আগামী কাল থেকে...
+                </p>
+                <button class="bg-gray-500 text-white px-4 py-2 mt-2 bangla w-full">বিস্তারিত ফর্ম</button>
+                <p>dfjfkfjsjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+            </div>
+            <div class="bg-gray-200 text-black p-3">
+              <p class="bangla">
+                  <!-- Application content here -->
+                  আগামী জানানো যাচ্ছে যে, আগামী কাল থেকে...
+              </p>
+              <button class="bg-gray-500 text-white px-4 py-2 mt-2 bangla w-full">বিস্তারিত ফর্ম</button>
+              <p>dfjfkfjsjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+          </div>
+          <div class="bg-gray-200 text-black p-3">
+            <p class="bangla">
+                <!-- Application content here -->
+                আগামী জানানো যাচ্ছে যে, আগামী কাল থেকে...
+            </p>
+            <button class="bg-gray-500 text-white px-4 py-2 mt-2 bangla w-full">বিস্তারিত ফর্ম</button>
+            <p>dfjfkfjsjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+        </div>
+            <!-- More applications here -->
+        </div>
+    </div>
+</div>
+
+    <script src="{% static "js/slider.min.js" %}" id="slider"></script>
+   
+    <script src="{% static "js/marquee-cont.js" %}" id="marquee-cont"></script>
+</body>
+</html>
+
+{% comment %} <!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
@@ -14,29 +245,21 @@
       
       !function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
     </script>
-    {% comment %} <link rel='stylesheet' href= "{% static "css/elementor-assets-lib-eicons-css-elementor-icons.min.css" %}"> {% endcomment %}
+   
     <link rel="stylesheet" href="{% static "css/div.gallery.css" %}">
     <link rel="stylesheet" href= "{% static "css/marquee-cont.css" %}">
     <link rel="stylesheet" href= "{% static "css/slider.css" %}">
     <link rel='stylesheet' href= "{% static "css/elementor-assets-css-frontend-lite.min.css" %}">
     <link rel='stylesheet' href= "{% static "css/elementor-css-post-8.css" %}">
-    {% comment %} <link rel='stylesheet' href= "{% static "css/elementor-pro-assets-css-frontend-lite.min.css" %}"> {% endcomment %}
-    {% comment %} <link rel='stylesheet' href= "{% static "css/news-ticker-for-elementor-assets-css-breaking-news-ticker.css" %}"> {% endcomment %}
-    {% comment %} <link rel='stylesheet' href= "{% static "css/news-ticker-for-elementor-assets-css-style.css" %}"> {% endcomment %}
+   
     <link rel='stylesheet' href= "{% static "css/elementor-css-global.css" %}">
     <link rel='stylesheet' href= "{% static "css/elementor-css-post-17.css" %}">
     <link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat+Alternates%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.9.3' media='all' />
-    {% comment %} <link rel='stylesheet' href= "{% static "css/elementor-assets-lib-font-awesome-css-fontawesome.min.css" %}"> {% endcomment %}
-    {% comment %} <link rel='stylesheet' href= "{% static "css/elementor-assets-lib-font-awesome-css-regular.min.css" %}"> {% endcomment %}
-    {% comment %} <link rel='stylesheet' href= "{% static "css/elementor-assets-lib-font-awesome-css-solid.min.css" %}"> {% endcomment %}
-    {% comment %} <script src="{% static "js/jquery.min.js" %}" id='jquery-core-js'></script> {% endcomment %}
-    {% comment %} <script src="{% static "js/jquery-migrate.min.js" %}" id='jquery-migrate-js'></script> {% endcomment %}
-    {% comment %} <script src="{% static "js/export-wp-page-to-static-html-public.js" %}" id='export-wp-page-to-static-html-js'></script> {% endcomment %}
-    {% comment %} <link rel="https://api.w.org/" href="#" /> {% endcomment %}
+    
     <link rel="alternate" type="application/json" href="#" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="#" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="#" />
-    {% comment %} <meta name="generator" content="WordPress 5.9.3" /> {% endcomment %}
+
     <link rel="canonical" href="./index.html" />
     <link rel="alternate" type="application/json+oembed" href="#" />
     <link rel="alternate" type="text/xml+oembed" href="#" />
@@ -120,7 +343,7 @@
                   <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-cb729f3" data-id="cb729f3" data-element_type="column">
                     <div class="elementor-widget-wrap elementor-element-populated">
                       <div class="elementor-element elementor-element-796ad3e elementor-widget elementor-widget-image" data-id="796ad3e" data-element_type="widget" data-widget_type="image.default">
-                        {% comment %} <div class="elementor-widget-container">
+                      <div class="elementor-widget-container">
                           <style>/*! elementor - v3.6.4 - 13-04-2022 */
                             .elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}
                           </style>
@@ -144,7 +367,7 @@
                             <span >আল-জামিয়াতুল ইসলামিয়া মাদিনাতুল উলুম মাদরাসা</span>
                           </a>
                           
-                        </div> {% endcomment %}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -192,9 +415,9 @@
           </nav>
         </div>
       </section>
-      {% comment %} Basic and below is other than base {% endcomment %}
+    
       {% block content %}{% endblock content %}  
-      {% comment %}  {% endcomment %}
+      
       <section class="elementor-section elementor-top-section elementor-element elementor-element-a3bbad9 elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default" data-id="a3bbad9" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
         <div class="elementor-container elementor-column-gap-no">
           <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2ef7b94" data-id="2ef7b94" data-element_type="column">
@@ -324,56 +547,7 @@
         </div>
       </section>
     </div>
-    {% comment %} <script id="generate-a11y">!function(){"use strict";if("querySelector"in document&&"addEventListener"in window){var e=document.body;e.addEventListener("mousedown",function(){e.classList.add("using-mouse")}),e.addEventListener("keydown",function(){e.classList.remove("using-mouse")})}}();</script>
-    <link rel='stylesheet' href= "{% static "css/elementor-assets-lib-animations-animations.min.css" %}">
-    <script src=" {% static "js/breaking-news-ticker.min.js" %} " id='wb-nt-library-js'></script>
-    <script src=" {% static "js/main.js" %} " id='wb-nt-main-js'></script> {% endcomment %}
-    {% comment %} <script id='cb70d11b8-js-extra'>
-      var localize = {"ajaxurl":"http:\/\/localhost\/index\/wp-admin\/admin-ajax.php","nonce":"70050f25a8","i18n":{"added":"Added ","compare":"Compare","loading":"Loading..."},"page_permalink":"http:\/\/localhost\/index\/"};
-    </script> {% endcomment %}
-    {% comment %} <script src=" {% static "js/cb70d11b8.min.js" %} " id='cb70d11b8-js'></script> {% endcomment %}
-    <!--[if lte IE 11]>
-    <script src='./js/classList.min.js' id='generate-classlist-js'></script>
-    <![endif]-->
-    {% comment %} <script id='generate-menu-js-extra'>
-      var generatepressMenu = {"toggleOpenedSubMenus":"1","openSubMenuLabel":"Open Sub-Menu","closeSubMenuLabel":"Close Sub-Menu"};
-    </script>
-    <script src="{% static "js/menu.min.js" %}" id='generate-menu-js'></script>
-    <script id='generate-back-to-top-js-extra'>
-      var generatepressBackToTop = {"smooth":"1"};
-    </script> {% endcomment %}
-    {% comment %} <script src="{% static "js/back-to-top.min.js" %}" id='generate-back-to-top-js'></script>
-    <script src="{% static "js/jquery.smartmenus.min.js" %}" id='smartmenus-js'></script>
-    <script src="{% static "js/imagesloaded.min.js" %}" id='imagesloaded-js'></script>
-    <script src="{% static "js/webpack-pro.runtime.min.js" %}" id='elementor-pro-webpack-runtime-js'></script>
-    <script src="{% static "js/webpack.runtime.min.js" %}" id='elementor-webpack-runtime-js'></script>
-    <script src="{% static "js/frontend-modules.min.js" %}" id='elementor-frontend-modules-js'></script>
-    <script src="{% static "js/regenerator-runtime.min.js" %}" id='regenerator-runtime-js'></script>
-    <script src="{% static "js/wp-polyfill.min.js" %}" id='wp-polyfill-js'></script>
-    <script src="{% static "js/hooks.min.js" %}" id='wp-hooks-js'></script>
-    <script src="{% static "js/i18n.min.js" %}" id='wp-i18n-js'></script> {% endcomment %}
-    {% comment %} <script id='wp-i18n-js-after'>
-      wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-    </script> {% endcomment %}
-    {% comment %} <script id='elementor-pro-frontend-js-translations'>
-      ( function( domain, translations ) {
-      	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
-      	localeData[""].domain = domain;
-      	wp.i18n.setLocaleData( localeData, domain );
-      } )( "elementor-pro", { "locale_data": { "messages": { "": {} } } } );
-    </script> {% endcomment %}
-    {% comment %} <script id='elementor-pro-frontend-js-before'>
-      var ElementorProFrontendConfig = {"ajaxurl":"http:\/\/localhost\/index\/wp-admin\/admin-ajax.php","nonce":"e0e29be0c3","urls":{"assets":"http:\/\/localhost\/index\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"http:\/\/localhost\/index\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"http:\/\/localhost\/index\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
-    </script>
-    <script src="{% static "js/frontend.min.js" %}" id='elementor-pro-frontend-js'></script>
-    <script src="{% static "js/waypoints.min.js" %}" id='elementor-waypoints-js'></script>
-    <script src="{% static "js/core.min.js" %}" id='jquery-ui-core-js'></script>
-    <script id='elementor-frontend-js-before'>
-      var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.6.4","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"a11y_improvements":true,"e_import_export":true,"additional_custom_breakpoints":true,"e_hidden_wordpress_widgets":true,"theme_builder_v2":true,"landing-pages":true,"elements-color-picker":true,"favorite-widgets":true,"admin-top-bar":true,"page-transitions":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"http:\/\/localhost\/index\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":17,"title":"Madrasha%20Template%20%E2%80%93%20Just%20another%20WordPress%20site","excerpt":"","featuredImage":false}};
-    </script> {% endcomment %}
-    {% comment %} <script src="{% static "js/frontend.min.js" %}" id='elementor-frontend-js'></script>
-    <script src="{% static "js/elements-handlers.min.js" %}" id='pro-elements-handlers-js'></script> {% endcomment %}
     <script src="{% static "js/slider.min.js" %}" id="slider"></script>
     <script src="{% static "js/marquee-cont.js" %}" id="marquee-cont"></script>
   </body>
-</html>
+</html> {% endcomment %}

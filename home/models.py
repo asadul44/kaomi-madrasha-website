@@ -136,3 +136,12 @@ class Slider(models.Model):
     def __str__(self):
         return self.photo_title
 
+from django.db import models
+
+class MadrashaSlider(models.Model):
+    photo_title = models.CharField(max_length=150)
+    add_photo = models.ImageField(upload_to="madrashaslider/")
+    details_of_photo = models.TextField()
+
+    def __str__(self):
+        return self.photo_title
