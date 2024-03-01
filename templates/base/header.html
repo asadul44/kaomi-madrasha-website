@@ -1,0 +1,189 @@
+<!-- Django template header.html -->
+{% load static %}
+<div class="bg-green-800 text-white text-center p-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-center flex-wrap">
+      {% comment %}
+      <div class="flex space-x-4 p-4">
+        <img src={% static 'images/logo_2.png' %} alt="Institution Logo"
+        class="h-16">
+        <div>
+          <h1 class="text-2xl font-bold">
+            Al- Jamiatul Ahliah Darul Uloom Moinul Islam
+          </h1>
+          <p>Hathazari, Chittagong-4330, Bangladesh</p>
+          <p class="text-xl">الجامعة الإسلامية دار العلوم منول الإسلام</p>
+        </div>
+      </div>
+      {% endcomment %}
+      <div
+        class="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4 p-4"
+      >
+        <!-- Left side content with logo and institution details -->
+        <div
+          class="flex flex-col md:flex-row space-x-0 md:space-x-4 items-left"
+        >
+          <img
+            src="{% static 'images/logo_2.png' %}"
+            alt="Institution Logo"
+            class="h-16 md:h-24"
+          />
+          <div>
+            <h1 class="text-xl md:text-2xl font-bold">
+              Al- Jamiatul Ahliah Darul Uloom Moinul Islam
+            </h1>
+            <p>Hathazari, Chittagong-4330, Bangladesh</p>
+            <p class="text-lg md:text-xl">
+              الجامعة الإسلامية دار العلوم منول الإسلام
+            </p>
+          </div>
+        </div>
+
+        <!-- Right side content (add your new content here) -->
+        <div class="text-right items-left md:text-left">
+          <p class="text-lg md:text-xl mt-20">
+            الجامعة الإسلامية دار العلوم منول الإسلام
+          </p>
+          <!-- Add more content as needed -->
+        </div>
+      </div>
+      <!-- Hamburger Menu Icon for mobile -->
+      <button id="hamburgerBtn" class="md:hidden text-white focus:outline-none">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      </button>
+      <!-- Desktop Navigation Links -->
+      <div class="hidden md:flex items-center space-x-1">
+        <a
+          href="#"
+          class="bangla text-sm px-3 py-2 rounded-md text-white bg-orange-500 hover:bg-orange-600"
+          >হোম</a
+        >
+        <a
+          href="#"
+          class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700"
+          >জামিয়া পরিচিতি</a
+        >
+        <a
+          href="#"
+          class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700"
+          >কি করব</a
+        >
+        <a
+          href="#"
+          class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700"
+          >অনলাইন অ্যাডমিশন</a
+        >
+        <a
+          href="#"
+          class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700"
+          >যোগাযোগ</a
+        >
+        <a
+          href="#"
+          class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700"
+          >কি করব</a
+        >
+
+        <a
+          href="#"
+          class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700"
+          >যোগাযোগ</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar for Mobile Navigation -->
+<div
+  id="mobileMenu"
+  class="fixed inset-0 bg-green-800 bg-opacity-75 hidden flex-col z-50 w-3/4"
+>
+  <div class="p-5 text-right">
+    <button id="closeSidebar" class="text-white">
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        ></path>
+      </svg>
+    </button>
+  </div>
+  <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-green-800 px-6">
+    <nav class="flex flex-1 flex-col">
+      <a
+        href="#"
+        class="bangla text-sm px-3 py-2 rounded-md text-white bg-orange-500 hover:bg-orange-600"
+        >হোম</a
+      >
+      <a
+        href="#"
+        class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700"
+        >জামিয়া পরিচিতি</a
+      >
+      <a
+        href="#"
+        class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700"
+        >কি করব</a
+      >
+      <a
+        href="#"
+        class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700"
+        >অনলাইন অ্যাডমিশন</a
+      >
+      <a
+        href="#"
+        class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700"
+        >যোগাযোগ</a
+      >
+      <a
+        href="#"
+        class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700"
+        >কি করব</a
+      >
+
+      <a
+        href="#"
+        class="bangla text-sm px-3 py-2 rounded-md text-white hover:bg-green-700"
+        >যোগাযোগ</a
+      >
+    </nav>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerBtn = document.getElementById("hamburgerBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeSidebar = document.getElementById("closeSidebar");
+
+    hamburgerBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    closeSidebar.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
+</script>
